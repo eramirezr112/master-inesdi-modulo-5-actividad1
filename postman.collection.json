@@ -110,6 +110,44 @@
 			"response": []
 		},
 		{
+			"name": "Get Employee with badges Black",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n    \"name\": \"Esteban\",\r\n    \"age\": 37,\r\n    \"phone\": {\r\n      \"personal\": \"506-8876-1823\",\r\n      \"work\": \"\",\r\n      \"ext\": \"\"\r\n    },\r\n    \"privileges\": \"user\",\r\n    \"favorites\": {\r\n      \"artist\": \"Marvel\",\r\n      \"food\": \"Chiken\"\r\n    },\r\n    \"finished\": [\r\n      17,\r\n      3\r\n    ],\r\n    \"badges\": [\r\n      \"blue\",\r\n      \"black\"\r\n    ],\r\n    \"points\": [\r\n      {\r\n        \"points\": 85,\r\n        \"bonus\": 20\r\n      },\r\n      {\r\n        \"points\": 85,\r\n        \"bonus\": 10\r\n      }\r\n    ]\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/employees?badges=black",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"employees"
+					],
+					"query": [
+						{
+							"key": "badges",
+							"value": "black"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Add Employee",
 			"request": {
 				"method": "POST",
